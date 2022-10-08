@@ -45,7 +45,7 @@ const Login = () => {
                       </p>
                     </Form.Group>
                     <div className="d-grid">
-                      <Button variant="success" type="submit">
+                      <Button href="./Dashboard" variant="success" type="submit">
                         Ingresar
                       </Button>
                     </div>
