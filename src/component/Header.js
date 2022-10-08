@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 import Logo from "../assets/img/NCRLogo.png";
 
 const Header = () => {
