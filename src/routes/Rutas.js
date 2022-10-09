@@ -5,6 +5,7 @@ import Dashboard from '../pages/Dashboard';
 import Content from '../component/Content';
 import Accounts from '../component/Accounts';
 import Transfer from '../component/Transfer';
+import Record from '../component/Record';
 
 function Rutas() {
   return (
@@ -15,6 +16,7 @@ function Rutas() {
 
         <Route path="/Accounts" element={<Accounts />} />
         <Route path="/Transfer" element={<Transfer />} />
+        <Route path="/Record" element={<Record />} />
 
     </Routes>
   );

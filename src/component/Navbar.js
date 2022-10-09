@@ -13,7 +13,7 @@ const Navbar = () => {
       <a className="nav-link fs-3" href="/Transfer">Transferir</a>
     </li>
     <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Historial</a>
+      <a className="nav-link fs-3" href="/Record">Historial</a>
     </li>
   </ul>
 </nav>

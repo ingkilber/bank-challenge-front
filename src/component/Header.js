@@ -50,25 +50,24 @@ const Header = () => {
               </div>
               <ul
                 className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuAvatar"
-              >
+                aria-labelledby="navbarDropdownMenuAvatar">
                 <li>
-                  <a className="dropdown-item">
-                    Perfil
+                  <a className="dropdown-item">Perfil</a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Configuración
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                  Configuración
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                  Cerrar sesión
+                    Cerrar sesión
                   </a>
                 </li>
               </ul>
             </div>
+            <button type="button" class="btn btn-success m-4" href="/">Cerrar sesión </button>
+            
           </div>
         </div>
       </nav>
