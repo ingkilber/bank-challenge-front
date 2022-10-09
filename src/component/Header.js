@@ -32,42 +32,6 @@ const Header = () => {
 
             <div className="dropdown">
               <div
-                className="link-secondary me-3 dropdown-toggle hidden-arrow"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="fas fa-bell"></i>
-                <span className="badge rounded-pill badge-notification bg-danger">
-                  5
-                </span>
-              </div>
-              <ul
-                className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Nuevas noticias
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Novedades
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Comunidad
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="dropdown">
-              <div
                 className="dropdown-toggle d-flex align-items-center hidden-arrow"
                 href="#"
                 id="navbarDropdownMenuAvatar"
@@ -75,11 +39,11 @@ const Header = () => {
                 data-mdb-toggle="dropdown"
                 aria-expanded="false"
               >
-                <strong class="d-none d-sm-block ms-1">User Welcomen</strong>
+                <strong class="d-none d-sm-block ms-1 p-4">Bienvenido! </strong>
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
                   className="rounded-circle"
-                  height="25"
+                  height="35"
                   alt="Black and White"
                   loading="lazy"
                 />
@@ -89,7 +53,7 @@ const Header = () => {
                 aria-labelledby="navbarDropdownMenuAvatar"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item">
                     Perfil
                   </a>
                 </li>
