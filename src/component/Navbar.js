@@ -7,19 +7,13 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-success justify-content-center">
   <ul className="navbar-nav">
     <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Cuestas</a>
+      <a className="nav-link fs-3" href="#">Cuentas</a>
     </li>
     <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Transferencias</a>
+      <a className="nav-link fs-3" href="#">Transferir</a>
     </li>
     <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Tarjetas</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Inversiones</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link fs-3" href="#">Préstamos</a>
+      <a className="nav-link fs-3" href="#">Historial</a>
     </li>
   </ul>
 </nav>
