@@ -42,7 +42,7 @@ const Content = () => {
         </div>
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-4">
           {datos.map((item, index) => (
-            <div className="col">
+            <div className="col" key={index}>
               <div className="card h-100">
                 <div className="card-body bg-success">
                   <h5 className="text-white d-flex justify-content-center">

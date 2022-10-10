@@ -6,28 +6,33 @@ import Navbar from "./Navbar";
 
 const Transfer = () => {
   const [datos, setDatos] = useState([]);
-  const [cuentaDestino, setcuentaDestino] = useState();
-  const [cuentaOrigen, setcuentaOrigen] = useState();
-  const [cantidad, setCantidad] = useState();
-  const [motivo, setMotivo] = useState();
+  const [cuentaDestino, setcuentaDestino] = useState("");
+  const [cuentaOrigen, setcuentaOrigen] = useState("");
+  const [cantidad, setCantidad] = useState(0);
+  const [motivo, setMotivo] = useState("");
   const [iduser, setIduser] = useState(1);
   const [saldotemp, setSaldoTemp] = useState(0);
-
-  const accountSelect = (account, saldo) => {
-    // setnameAccount(account);
-    // setSaldo(saldo);
-    alert(account);
-  };
 
   const Transfer = async () => {
     let datos = { cuentaOrigen, cuentaDestino, cantidad, motivo, iduser };
 
+    // verificar saldos
     if (saldotemp == 0) {
       alert("Esta cuenta no tiene saldo para tranferir");
       return;
     } else if (saldotemp < cantidad) {
-      console.log(saldotemp);
       alert("No tienes suficiente saldo para tranferir");
+      return;
+    }
+
+    if (
+      cuentaDestino == "" ||
+      cuentaOrigen == "" ||
+      motivo == "" ||
+      cantidad == 0
+    ) {
+      alert("Complete todos los campos");
+      return;
     }
 
     var myHeaders = new Headers();
@@ -43,8 +48,13 @@ const Transfer = () => {
     };
 
     fetch("http://localhost:8080/api/bank/transfer", requestOptions)
-      .then((response) => response.text())
-      .then((result) => alert(result))
+      .then((response) => response.json())
+      .then((result) => {
+        alert(result.message);
+        document.getElementById("transfer").reset();
+        setCantidad(0);
+        setMotivo("");
+      })
       .catch((error) => console.log("error", error));
   };
 
@@ -82,20 +92,29 @@ const Transfer = () => {
                     Realizar transferencia
                   </h3>
                   <div className="mb-3">
-                    <Form>
+                    <Form id="transfer">
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="text-center">
-                          ¿A quién le querés transferir?{" "}
-                          <a class="text-success fs-6" href="#">
-                            Agregar un nuevo destinatario
-                          </a>
+                          Agregar un nuevo destinatario
                         </Form.Label>
-                        <Form.Control
-                          type="number"
-                          placeholder="Escribí número de cuenta destino"
-                          value={cuentaDestino}
-                          onChange={(e) => setcuentaDestino(e.target.value)}
-                        />
+                        <select
+                          class="form-select"
+                          defaultValue="0"
+                          aria-label="Default select example"
+                          onChange={(e) => {
+                            console.log(e.target.value);
+                            setcuentaDestino(e.target.value);
+                          }}
+                        >
+                          <option selected value="0" disabled>
+                            Selecciona tu cuenta
+                          </option>
+                          {datos.map((item, index) => (
+                            <option key={index} value={item.nro_cuenta}>
+                              {item.nro_cuenta}
+                            </option>
+                          ))}
+                        </select>
                       </Form.Group>
 
                       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -115,7 +134,7 @@ const Transfer = () => {
                             Selecciona tu cuenta
                           </option>
                           {datos.map((item, index) => (
-                            <option value={item.nro_cuenta}>
+                            <option key={index} value={item.nro_cuenta}>
                               {item.nro_cuenta}
                             </option>
                           ))}
@@ -148,12 +167,7 @@ const Transfer = () => {
                       </Form.Group>
 
                       <div className="d-grid">
-                        <Button
-                          href="./Transfer"
-                          variant="success"
-                          type="submit"
-                          onClick={Transfer}
-                        >
+                        <Button variant="success" onClick={Transfer}>
                           Aceptar
                         </Button>
                       </div>

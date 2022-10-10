@@ -35,21 +35,6 @@ const Record = () => {
                   </h3>
                   <div className="mb-3">
                     <Form>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className="text-center">
-                          ¿Qué cuenta vas a usar?
-                        </Form.Label>
-                        <select
-                          className="form-select"
-                          aria-label="Default select example"
-                        >
-                          <option selected>Selecciona tu cuenta</option>
-                          <option value="1">default One</option>
-                          <option value="2">default Two</option>
-                          <option value="3">default Three</option>
-                        </select>
-                      </Form.Group>
-
                       <div class="container mt-4 p-0">
                         <table class="table table-bordered table-sm">
                           <thead>
@@ -61,7 +46,7 @@ const Record = () => {
                           </thead>
                           <tbody className="text-center">
                             {history.map((item, index) => (
-                              <tr>
+                              <tr key={index}>
                                 <td>{item.fecha_transferencia}</td>
                                 <td>{item.nota_transferencia}</td>
                                 <td>{item.monto} $</td>

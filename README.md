@@ -1,70 +1,87 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Full Stack Web Bank
 
-## Available Scripts
+Challenge developer Full Stack , 
+which simulates the financial software used in banking institutions
 
-In the project directory, you can run:
+## Screenshots
+Click on image to view fullscreen and zoom
 
-### `npm start`
+### Desktop
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center">
+  <img src="./public/bank.png?raw=true" />
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+- [Xampp](https://www.apachefriends.org/es/index.html)
+- [VS-Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/es/)
+- [React.js](https://es.reactjs.org/)
+- [Bootstrap.js](https://getbootstrap.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Core Structure
 
-### `npm run build`
+    code backend
+      ├── package.json
+      │
+      ├── api (bank-challenge-backend)
+      │   ├── app
+      │   │   ├── config
+      │   │   ├── controllers
+      │   │   ├── models
+      │   │   └── routes
+      │   │
+      │   └── node_modules
+      ├── package-lock.json
+      ├── package.json
+      ├── README.md
+      └── server.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    code frontend
+      ├── web (bank-challenge-front)
+      │   ├── public
+      │   ├── src
+      │   │   ├── assets
+      │   │   ├── component
+      │   │   ├── pages
+      │   │   └── routes
+      │   ├── App.test.js
+      │   ├── index.js
+      │   ├── reportWebVitals.js
+      │   └── setupTests.js
+      │
+      ├── .gitignore
+      ├── package-lock.json
+      ├── package.json
+      └── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Install & run locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Backend service
 
-### `npm run eject`
+- Clone repo [bank-backend](https://github.com/ingkilber/bank-challenge-front\bank-challenge-backend)
+- Open the cloned repo;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  *MSQL*
+- Open XAMPP Control panal and start [apache] and [mysql] .
+- open link localhost/phpmyadmin
+- give a database name as (ncr-bank) hit on create button.
+- after creating database name click on import.
+- browse the file in directory C:\bank-challenge-backend\database\ncr-bank.sql
+- after importing successfully.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  *API NODE.JS*
+- abrir VS-Code and access the folder [bank-challenge-backend]
+- `npm install` to install the dependecies;
+- `node server.js` to start the server;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Frontend service
+*Backend service must be already running locally*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Clone repo [bank-frontend](https://github.com/ingkilber/bank-challenge-front)
+- Open the cloned repo;
+- `yarn install` or `npm install` to install the dependecies;
+- `yarn start` or `npm start` to start the app;
