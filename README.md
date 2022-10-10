@@ -62,7 +62,7 @@ Click on image to view fullscreen and zoom
 
 #### Backend service
 
-- Clone repo [bank-backend](https://github.com/ingkilber/bank-challenge-front\bank-challenge-backend)
+- Clone repo [bank-backend](https://github.com/ingkilber/bank-challenge-front/tree/master/bank-challenge-backend)
 - Open the cloned repo;
 
   *MSQL*
