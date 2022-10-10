@@ -21,10 +21,10 @@ const Login = () => {
                 <div className="mb-3">
                   <Form>                  
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label className="text-center">
+                      <Form.Label className="text-center" required>
                       Ingresá tu usuario
                       </Form.Label>
-                      <Form.Control type="email" placeholder="Usuario" />
+                      <Form.Control type="text" placeholder="Usuario" required/>
                     </Form.Group>
 
                     <Form.Group
@@ -32,7 +32,7 @@ const Login = () => {
                       controlId="formBasicPassword"
                     >
                       <Form.Label>Ingresá tu clave</Form.Label>
-                      <Form.Control type="password" placeholder="Clave" />
+                      <Form.Control type="password" placeholder="Clave" required/>
                     </Form.Group>
                     <Form.Group
                       className="mb-3"
@@ -52,8 +52,8 @@ const Login = () => {
                   </Form>
                   <div className="mt-3">
                     <p className="mb-0  text-center">
-                    ¿No tienes una cuenta?{" "}
-                      <a href="{''}" className="text-success fw-bold">
+                    ¿No tienes una cuenta?
+                      <a href="#!" className="text-success fw-bold p-2">
                       Inscribirse
                       </a>
                     </p>

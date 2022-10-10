@@ -35,7 +35,7 @@ const Accounts = () => {
     
                     <div className="d-grid m-4">
                       <Button href="./Dashboard" variant="secondary" type="submit">
-                        Volver
+                      Volver menú principal
                       </Button>
                     </div>                  
 

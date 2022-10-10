@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../assets/img/NCRLogo.png";
 
@@ -36,37 +37,26 @@ const Header = () => {
                 href="#"
                 id="navbarDropdownMenuAvatar"
                 role="button"
-                data-mdb-toggle="dropdown"
                 aria-expanded="false"
               >
                 <strong class="d-none d-sm-block ms-1 p-4">Bienvenido! </strong>
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/18.webp"
+                  src="http://svgur.com/i/4V0.svg"
                   className="rounded-circle"
-                  height="35"
+                  height="45"
                   alt="Black and White"
                   loading="lazy"
                 />
-              </div>
-              <ul
-                className="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdownMenuAvatar">
-                <li>
-                  <a className="dropdown-item">Perfil</a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Configuración
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Cerrar sesión
-                  </a>
-                </li>
-              </ul>
+              </div>              
             </div>
-            <button type="button" class="btn btn-success m-4" href="/">Cerrar sesión </button>
+            <Button
+                          href="/"
+                          variant="success"
+                          type="submit"
+                          className="m-4"
+                        >
+                          Cerrar sesión
+                        </Button>
             
           </div>
         </div>
